@@ -24,22 +24,22 @@ export default function Credit() {
                     <h2 className="text-lg font-bold text-blue-400">Quick Links</h2>
                     <ul className="text-sm space-y-2 mt-2">
                         <li className="hover:text-blue-400 cursor-pointer">
-                            <Link to="/" className="hover:text-blue-400">
+                            <Link to="/uniguidedemo/" className="hover:text-blue-400">
                                 Home
                             </Link>
                         </li>
                         <li className="hover:text-blue-400 cursor-pointer">
-                            <Link to="/Fields" className="hover:text-blue-400">
+                            <Link to="/uniguidedemo/Fields" className="hover:text-blue-400">
                                 Fields
                             </Link>
                         </li>
                         <li className="hover:text-blue-400 cursor-pointer">
-                            <Link to="/Suggestions" className="hover:text-blue-400">
+                            <Link to="/uniguidedemo/Suggestions" className="hover:text-blue-400">
                                 Suggestions
                             </Link>    
                             </li>
                         <li className="hover:text-blue-400 cursor-pointer">
-                            <Link to="/About" className="hover:text-blue-400">
+                            <Link to="/uniguidedemo/About" className="hover:text-blue-400">
                                 About
                             </Link>
                         </li>
