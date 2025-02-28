@@ -14,7 +14,7 @@ export default function EducationFields() {
                         title="Engineering and Technology"
                         description="Exploring the latest advancements in engineering and tech innovation."
                         icon={faWrench}
-                        to = "/Fields/Engineering-and-Technology/Courses"
+                        to= "/uniguidedemo/Fields/Engineering-and-Technology/Courses"
                     />
                     <FieldCard
                         title="Coming Soon"

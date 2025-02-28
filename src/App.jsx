@@ -13,13 +13,13 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/Fields' element={<Fields />} />
-          <Route path='/Suggestions' element={<Suggestions />} />
-          <Route path='/About' element={<About />} />
-          <Route path='/Fields/Engineering-And-Technology/Courses' element={<EngineeringAndTechnology />}/>
-          <Route path="/Fields/Engineering-and-Technology/Courses/Full-Stack-Development" element={<Outline/>}/>
-          <Route path="/Fields/Engineering-and-Technology/Courses/Full-Stack-Development/All-Contents" element={<AllContent/>}/>
+          <Route path='/uniguidedemo/' element={<Home />} />
+          <Route path='/uniguidedemo/Fields' element={<Fields />} />
+          <Route path='/uniguidedemo/Suggestions' element={<Suggestions />} />
+          <Route path='/uniguidedemo/About' element={<About />} />
+          <Route path='/uniguidedemo/Fields/Engineering-And-Technology/Courses' element={<EngineeringAndTechnology />}/>
+          <Route path="/uniguidedemo/Fields/Engineering-and-Technology/Courses/Full-Stack-Development" element={<Outline/>}/>
+          <Route path="/uniguidedemo/Fields/Engineering-and-Technology/Courses/Full-Stack-Development/All-Contents" element={<AllContent/>}/>
         </Routes>
       </Router>
     </>

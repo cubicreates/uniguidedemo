@@ -42,7 +42,7 @@ export default function Index() {
                     <ScrollLink to="fields" smooth={true} duration={500} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-5 px-12 rounded-lg transition text-2xl shadow-lg cursor-pointer">
                         Explore Fields
                     </ScrollLink>
-                    <RouteLink to="/Suggestions" className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-500 text-white font-semibold py-5 px-12 rounded-lg transition text-2xl shadow-lg">
+                    <RouteLink to="/uniguidedemo/Suggestions" className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-500 text-white font-semibold py-5 px-12 rounded-lg transition text-2xl shadow-lg">
                         Add Suggestions
                     </RouteLink>
                 </div>
@@ -54,7 +54,7 @@ export default function Index() {
                         title="Engineering and Technology"
                         description="Exploring the latest advancements in engineering and tech innovation."
                         icon={faWrench}
-                        to = "/Fields/Engineering-and-Technology/Courses"
+                        to= "/uniguidedemo/Fields/Engineering-and-Technology/Courses"
                     />
                     <FieldCard
                         title="Coming Soon"
@@ -70,7 +70,7 @@ export default function Index() {
                     />
                 </div>
                 <div className="flex justify-center mt-10">
-                    <RouteLink to="/Fields" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 px-14 rounded-lg transition text-xl flex items-center shadow-lg">
+                    <RouteLink to="/uniguidedemo/Fields" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 px-14 rounded-lg transition text-xl flex items-center shadow-lg">
                         More Fields <FaArrowRight className="ml-2" />
                     </RouteLink>
                 </div>
