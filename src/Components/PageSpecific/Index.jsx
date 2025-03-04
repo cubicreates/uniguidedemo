@@ -135,7 +135,7 @@ export default function Index() {
                         <div className="flex justify-center gap-8">
                             {features.map((feature, index) => (
                                 <div key={index} className="flex flex-col items-center transform transition-transform duration-300 hover:scale-105 w-80">
-                                    <div className="flex justify-center items-center h-20 w-20">
+                                    <div className="flex justify-center items-center h-20 w-20 text-center">
                                         {feature.icon}
                                     </div>
                                     <h3 className="font-bold text-xl mt-4 text-center">{feature.title}</h3>
@@ -148,7 +148,7 @@ export default function Index() {
                         <Slider {...sliderSettings}>
                             {features.map((feature, index) => (
                                 <div key={index} className="flex flex-col items-center justify-center text-center transform transition-transform duration-300 hover:scale-105">
-                                    <div className="flex justify-center items-center h-20 w-20 mb-2">
+                                    <div className="flex justify-center items-center h-20 w-20 mb-2 text-center">
                                         {feature.icon}
                                     </div>
                                     <h3 className="font-bold text-xl">{feature.title}</h3>
@@ -158,6 +158,7 @@ export default function Index() {
                         </Slider>
                     </div>
                 </div>
-            </div>        </>
+            </div>
+        </>
     );
 }
