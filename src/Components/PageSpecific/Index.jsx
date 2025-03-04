@@ -4,7 +4,10 @@ import { Link as RouteLink } from "react-router-dom";
 import { faWrench, faClock } from "@fortawesome/free-solid-svg-icons";
 import { FaRoad, FaProjectDiagram, FaChartLine, FaUsers, FaArrowRight } from "react-icons/fa";
 import FieldCard from "../Essentials/FieldCard";
+import Slider from "react-slick";
 import "../css/index.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const features = [
     {
@@ -29,6 +32,23 @@ const features = [
     },
 ];
 
+const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            },
+        },
+    ],
+};
+
 export default function Index() {
     return (
         <>
@@ -49,25 +69,58 @@ export default function Index() {
             </section>
             <div className="bg-gray-100 py-16 px-6 mt-4 h-[90vh]" id="fields">
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-8">Educational Fields</h1>
-                <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 mt-20">
-                    <FieldCard
-                        title="Engineering and Technology"
-                        description="Exploring the latest advancements in engineering and tech innovation."
-                        icon={faWrench}
-                        to= "/uniguidedemo/Fields/Engineering-and-Technology/Courses"
-                    />
-                    <FieldCard
-                        title="Coming Soon"
-                        description="Stay tuned for exciting updates and new content!"
-                        icon={faClock}
-                        to = "#"
-                    />
-                    <FieldCard
-                        title="Coming Soon"
-                        description="New features and content will be available soon!"
-                        icon={faClock}
-                        to="#"
-                    />
+                <div className="hidden md:block">
+                    <div className="flex justify-center gap-8">
+                        <FieldCard
+                            title="Engineering and Technology"
+                            description="Exploring the latest advancements in engineering and tech innovation."
+                            icon={faWrench}
+                            to="/uniguidedemo/Fields/Engineering-and-Technology/Courses"
+                            className="w-80"
+                        />
+                        <FieldCard
+                            title="Coming Soon"
+                            description="Stay tuned for exciting updates and new content!"
+                            icon={faClock}
+                            to="#"
+                            className="w-80"
+                        />
+                        <FieldCard
+                            title="Coming Soon"
+                            description="New features and content will be available soon!"
+                            icon={faClock}
+                            to="#"
+                            className="w-80"
+                        />
+                    </div>
+                </div>
+                <div className="md:hidden">
+                    <Slider {...sliderSettings}>
+                        <div>
+                            <FieldCard
+                                title="Engineering and Technology"
+                                description="Exploring the latest advancements in engineering and tech innovation."
+                                icon={faWrench}
+                                to="/uniguidedemo/Fields/Engineering-and-Technology/Courses"
+                            />
+                        </div>
+                        <div>
+                            <FieldCard
+                                title="Coming Soon"
+                                description="Stay tuned for exciting updates and new content!"
+                                icon={faClock}
+                                to="#"
+                            />
+                        </div>
+                        <div>
+                            <FieldCard
+                                title="Coming Soon"
+                                description="New features and content will be available soon!"
+                                icon={faClock}
+                                to="#"
+                            />
+                        </div>
+                    </Slider>
                 </div>
                 <div className="flex justify-center mt-10">
                     <RouteLink to="/uniguidedemo/Fields" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 px-14 rounded-lg transition text-xl flex items-center shadow-lg">
@@ -78,17 +131,33 @@ export default function Index() {
             <div className="p-6">
                 <div className="text-center my-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-20">Why Choose UniGUIDE?</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mt-4">
-                        {features.map((feature, index) => (
-                            <div key={index} className="flex flex-col items-center transform transition-transform duration-300 hover:scale-105">
-                                {feature.icon}
-                                <h3 className="font-bold text-xl mt-4">{feature.title}</h3>
-                                <p className="text-gray-600 text-center max-w-xs leading-relaxed">{feature.description}</p>
-                            </div>
-                        ))}
+                    <div className="hidden md:block">
+                        <div className="flex justify-center gap-8">
+                            {features.map((feature, index) => (
+                                <div key={index} className="flex flex-col items-center transform transition-transform duration-300 hover:scale-105 w-80">
+                                    <div className="flex justify-center items-center h-20 w-20">
+                                        {feature.icon}
+                                    </div>
+                                    <h3 className="font-bold text-xl mt-4 text-center">{feature.title}</h3>
+                                    <p className="text-gray-600 text-center max-w-xs leading-relaxed">{feature.description}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="md:hidden">
+                        <Slider {...sliderSettings}>
+                            {features.map((feature, index) => (
+                                <div key={index} className="flex flex-col items-center justify-center text-center transform transition-transform duration-300 hover:scale-105">
+                                    <div className="flex justify-center items-center h-20 w-20 mb-2">
+                                        {feature.icon}
+                                    </div>
+                                    <h3 className="font-bold text-xl">{feature.title}</h3>
+                                    <p className="text-gray-600 text-center max-w-xs leading-relaxed">{feature.description}</p>
+                                </div>
+                            ))}
+                        </Slider>
                     </div>
                 </div>
-            </div>
-        </>
+            </div>        </>
     );
 }
